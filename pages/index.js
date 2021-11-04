@@ -42,7 +42,7 @@ export default function Home() {
 				<SearchInput value={searchTerm} handleChange={handleSearch}/>
 				<div className="flex items-center mt-5 space-x-2">
 					<button className="btn" onClick={handleSubmit}>Goolok Search</button>
-					<p className="btn">I'm Feeling Lucky</p>
+					<p className="btn">I&rsquo;m Feeling Lucky</p>
 				</div>
 			</form>
 			<Footer/>
