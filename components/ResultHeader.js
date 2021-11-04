@@ -14,7 +14,17 @@ const ResultHeader = () => {
         e.preventDefault()
 
         if(searchTerm) {
+            localStorage.setItem('page', 0)
+            localStorage.setItem('pageIdx', 0)
             router.push(`/search?q=${searchTerm}`)
+        }
+    }
+
+    const handleBack = () => {
+        if(typeof window !== undefined) {
+            localStorage.setItem('page', 0)
+            localStorage.setItem('pageIdx', 0)
+            router.push('/')
         }
     }
 
@@ -22,13 +32,13 @@ const ResultHeader = () => {
 
     return (
         <header className="flex items-center justify-between flex-col sm:flex-row pt-5 pb-12 px-6 border-b border-gray-200 sticky top-0 bg-white overflow-x-hidden">
-            <h1 className="text-4xl mb-5 sm:mb-0 md:text-3xl font-bold cursor-pointer" onClick={() => router.push('/')}>
+            <h1 className="text-4xl mb-5 sm:mb-0 md:text-3xl font-bold cursor-pointer" onClick={handleBack}>
                 <span className="text-blue-400">G</span>
                 <span className="text-red-400">o</span>
                 <span className="text-yellow-400">o</span>
-                <span className="text-blue-400">l</span>
-                <span className="text-green-400">o</span>
-                <span className="text-red-400">k</span>
+                <span className="text-blue-400">h</span>
+                <span className="text-green-400">e</span>
+                <span className="text-red-400">n</span>
             </h1>
             <form className="flex-grow sm:ml-6 w-full" onSubmit={handleSubmit}>
                 <ResultInput value={searchTerm} setSearchTerm={setSearchTerm}/>

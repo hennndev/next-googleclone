@@ -10,7 +10,7 @@ const SearchInput = ({value, handleChange}) => {
                 type="text" 
                 value={value}
                 onChange={handleChange}
-                className="bg-transparent flex-grow mx-3 outline-none text-sm md:text-md" placeholder="Telusuri Goolok atau ketik URL"/>
+                className="bg-transparent flex-grow mx-3 outline-none text-sm md:text-md" placeholder="Telusuri Goohen atau ketik URL"/>
             <MicrophoneIcon className="h-4" />
         </div>
     )
