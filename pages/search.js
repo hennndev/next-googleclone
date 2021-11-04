@@ -13,14 +13,13 @@ const Search = ({results}) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>	
             <ResultHeader />
-            <ResultContent results={results}/>
-            {/* {results.error ? (
+            {results.error ? (
                 <div className="grid place-items-center mt-20">
                     <h1>Ooops, Maaf request sudah habis :(</h1>
                 </div>
             ) : (
-                
-            )} */}
+                <ResultContent results={results}/>
+            )}
         </div>
     )
 }
