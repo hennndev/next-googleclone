@@ -16,7 +16,7 @@ export default function Home() {
 		e.preventDefault()
 		
 		if(searchTerm) {
-			router.push(`/search?q=${searchTerm}`)
+			router.push(`/search?q=${searchTerm}&pageIdx=0`)
 		} else {
 			alert('Please input text whatever you want')
 		}

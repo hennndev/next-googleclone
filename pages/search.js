@@ -30,7 +30,7 @@ export default Search
 export const getServerSideProps = async (context) => {
 
     const term = context.query.q
-    const pageIdx = context?.query?.pageIdx || 0
+    const pageIdx = context.query.pageIdx
     
 	const res = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_API_KEY}&cx=${process.env.NEXT_PUBLIC_CX_KEY}&q=${term}&start=${pageIdx}`)
     const data = await res.json()
