@@ -5,6 +5,8 @@ import ResultContent from '../components/ResultContent'
 
 const Search = ({results}) => {
 
+    console.log(results)
+
     return (
         <div>
             <Head>
@@ -13,13 +15,14 @@ const Search = ({results}) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>	
             <ResultHeader />
-            {results.error ? (
+            {/* {results.error ? (
                 <div className="grid place-items-center mt-20">
                     <h1>Ooops, Maaf request sudah habis :(</h1>
                 </div>
             ) : (
                 <ResultContent results={results}/>
-            )}
+            )} */}
+            <ResultContent results={results}/>
         </div>
     )
 }
