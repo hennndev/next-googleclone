@@ -5,8 +5,6 @@ import ResultContent from '../components/ResultContent'
 
 const Search = ({results}) => {
 
-    console.log(results)
-
     return (
         <div>
             <Head>
@@ -33,7 +31,7 @@ export default Search
 export const getServerSideProps = async (context) => {
 
     const term = context.query.q
-    const pageIdx = context.query.pageIdx
+    const pageIdx = context?.query?.pageIdx || 0
     
 	const res = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyA2xoxtq1Xpq5VWZ3QlWwyRvz_R93FEnO8&cx=42a691f53d3ecd66b&q=${term}&start=${pageIdx}`)
     const data = await res.json()
